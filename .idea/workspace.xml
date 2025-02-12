@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Wireshark Packet Displayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Wireshark Packet Displayer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Accessed data from packets. MAC Addresses However" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,12 +82,25 @@
       <workItem from="1738841924088" duration="535000" />
       <workItem from="1738850161034" duration="693000" />
       <workItem from="1738861463426" duration="2272000" />
-      <workItem from="1739393839591" duration="3239000" />
+      <workItem from="1739393839591" duration="3729000" />
     </task>
+    <task id="LOCAL-00001" summary="Accessed data from packets. MAC Addresses However">
+      <option name="closed" value="true" />
+      <created>1739398243627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739398243627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Accessed data from packets. MAC Addresses However" />
+    <option name="LAST_COMMIT_MESSAGE" value="Accessed data from packets. MAC Addresses However" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1739394655684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
