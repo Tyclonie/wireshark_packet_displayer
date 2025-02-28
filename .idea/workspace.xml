@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Accessed data from packets. MAC Addresses However.">
+    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Accessed the IP Addresses from the packets.">
+      <change afterPath="$PROJECT_DIR$/resources/tesdt23.pcapng" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/test.pcapng" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -23,18 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Tyclonie"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tyclonie&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Tyclonie/wiresharkpacketdisplayer.git",
-    "accountId": "4750ff8d-5880-4f42-b58f-80aaa97c4a1b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Tyclonie/wiresharkpacketdisplayer.git&quot;,
+    &quot;accountId&quot;: &quot;4750ff8d-5880-4f42-b58f-80aaa97c4a1b&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -63,6 +65,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\moret\PycharmProjects\wiresharkpacketdisplayer\resources" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
@@ -85,7 +88,10 @@
       <workItem from="1738841924088" duration="535000" />
       <workItem from="1738850161034" duration="693000" />
       <workItem from="1738861463426" duration="2272000" />
-      <workItem from="1739393839591" duration="5625000" />
+      <workItem from="1739393839591" duration="6387000" />
+      <workItem from="1739815014246" duration="2677000" />
+      <workItem from="1740417506081" duration="1551000" />
+      <workItem from="1740769731188" duration="2080000" />
     </task>
     <task id="LOCAL-00001" summary="Accessed data from packets. MAC Addresses However">
       <option name="closed" value="true" />
@@ -103,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739398326434</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Accessed the IP Addresses from the packets.">
+      <option name="closed" value="true" />
+      <created>1739400342279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739400342279</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,10 +126,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Accessed data from packets. MAC Addresses However" />
     <MESSAGE value="Accessed data from packets. MAC Addresses However." />
-    <option name="LAST_COMMIT_MESSAGE" value="Accessed data from packets. MAC Addresses However." />
+    <MESSAGE value="Accessed the IP Addresses from the packets." />
+    <option name="LAST_COMMIT_MESSAGE" value="Accessed the IP Addresses from the packets." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1739399806503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1740418620823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wireshark_Packet_Displayer$main.coverage" NAME="main Coverage Results" MODIFIED="1738850958720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
