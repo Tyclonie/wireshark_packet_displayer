@@ -6,7 +6,7 @@ import json
 
 class App:
     def __init__(self):
-        self.packets = rdpcap("./resources/tesdt23.pcapng")
+        self.packets = rdpcap("resources/example_export2.pcapng")
         self.ip_addresses = []
         self.ip_addresses_data = {}
 
