@@ -2,6 +2,7 @@ from scapy.all import *
 from scapy.layers.inet import IP
 import requests
 import json
+import customtkinter
 
 
 class App:
@@ -28,18 +29,18 @@ class App:
                 ip_addresses_batch.append(ip_address)
             response = requests.post("http://ip-api.com/batch?fields=18548473", data=json.dumps(ip_addresses_batch)).json()
             for data_set in response:
-                try:
+                if "query" in data_set:
                     self.ip_addresses_data[data_set["query"]] = data_set
-                except KeyError:
+                else:
                     self.fail_count += 1
         ip_addresses_batch = []
         for ip_address in self.ip_addresses[(iterations * 100) + 1:]:
             ip_addresses_batch.append(ip_address)
         response = requests.post("http://ip-api.com/batch?fields=18556665", data=json.dumps(ip_addresses_batch)).json()
         for data_set in response:
-            try:
+            if "query" in data_set:
                 self.ip_addresses_data[data_set["query"]] = data_set
-            except KeyError:
+            else:
                 self.fail_count += 1
 
     def get_ip_information(self) -> dict:
