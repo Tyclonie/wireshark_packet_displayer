@@ -8,7 +8,7 @@ import customtkinter
 class App:
     def __init__(self):
         self.fail_count = None
-        self.packets = rdpcap("resources/example_export.pcapng")
+        self.packets = rdpcap("resources/example_export2.pcapng")
         self.ip_addresses = []
         self.ip_addresses_data = {}
 
@@ -29,7 +29,7 @@ class App:
                 ip_addresses_batch.append(ip_address)
             response = requests.post("http://ip-api.com/batch?fields=18548473", data=json.dumps(ip_addresses_batch)).json()
             for data_set in response:
-                if "query" in data_set:
+                if "lat" in data_set and "lon" in data_set and "query" in data_set:
                     self.ip_addresses_data[data_set["query"]] = data_set
                 else:
                     self.fail_count += 1
@@ -38,7 +38,7 @@ class App:
             ip_addresses_batch.append(ip_address)
         response = requests.post("http://ip-api.com/batch?fields=18556665", data=json.dumps(ip_addresses_batch)).json()
         for data_set in response:
-            if "query" in data_set:
+            if "lat" in data_set and "lon" in data_set and "query" in data_set:
                 self.ip_addresses_data[data_set["query"]] = data_set
             else:
                 self.fail_count += 1
