@@ -4,6 +4,15 @@ import requests
 import json
 import customtkinter
 
+class GUI(customtkinter.CTk):
+    def __init__(self):
+        super().__init__()
+
+    def load(self):
+        self.geometry("800x406")
+        canvas = customtkinter.CTkCanvas(self, width=800, height=406)
+        canvas.pack()
+        self.mainloop()
 
 class App:
     def __init__(self):
@@ -49,11 +58,13 @@ class App:
 
 
 def main():
-    app = App()
-    app.add_ip_addresses()
-    app.fetch_ip_information()
-    print(app.get_ip_information())
-    print(app.fail_count)
+    # app = App()
+    # app.add_ip_addresses()
+    # app.fetch_ip_information()
+    # print(app.get_ip_information())
+    # print(app.fail_count)
+    gui = GUI()
+    gui.load()
 
 
 
