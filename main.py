@@ -6,7 +6,8 @@ import json
 
 class App:
     def __init__(self):
-        self.packets = rdpcap("resources/example_export2.pcapng")
+        self.fail_count = None
+        self.packets = rdpcap("resources/example_export.pcapng")
         self.ip_addresses = []
         self.ip_addresses_data = {}
 
@@ -19,6 +20,7 @@ class App:
                     self.ip_addresses.append(packet[IP].src)
 
     def fetch_ip_information(self):
+        self.fail_count = 0
         iterations = len(self.ip_addresses) // 100
         for iteration in range(0, iterations - 1):
             ip_addresses_batch = []
@@ -26,13 +28,19 @@ class App:
                 ip_addresses_batch.append(ip_address)
             response = requests.post("http://ip-api.com/batch?fields=18548473", data=json.dumps(ip_addresses_batch)).json()
             for data_set in response:
-                self.ip_addresses_data[data_set["query"]] = data_set
+                try:
+                    self.ip_addresses_data[data_set["query"]] = data_set
+                except KeyError:
+                    self.fail_count += 1
         ip_addresses_batch = []
         for ip_address in self.ip_addresses[(iterations * 100) + 1:]:
             ip_addresses_batch.append(ip_address)
         response = requests.post("http://ip-api.com/batch?fields=18556665", data=json.dumps(ip_addresses_batch)).json()
         for data_set in response:
-            self.ip_addresses_data[data_set["query"]] = data_set
+            try:
+                self.ip_addresses_data[data_set["query"]] = data_set
+            except KeyError:
+                self.fail_count += 1
 
     def get_ip_information(self) -> dict:
         return self.ip_addresses_data
@@ -44,6 +52,7 @@ def main():
     app.add_ip_addresses()
     app.fetch_ip_information()
     print(app.get_ip_information())
+    print(app.fail_count)
 
 
 
