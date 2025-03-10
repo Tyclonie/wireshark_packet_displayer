@@ -3,6 +3,8 @@ from scapy.layers.inet import IP
 import requests
 import json
 import customtkinter
+import tkinter
+from PIL import Image, ImageTk
 
 class GUI(customtkinter.CTk):
     def __init__(self):
@@ -10,8 +12,11 @@ class GUI(customtkinter.CTk):
 
     def load(self):
         self.geometry("800x406")
+        image = Image.open("resources/map_of_earth.jpg")
+        background_image = ImageTk.PhotoImage(image)
         canvas = customtkinter.CTkCanvas(self, width=800, height=406)
         canvas.pack()
+        canvas.create_image(0, 0, image=background_image, anchor=tkinter.NW)
         self.mainloop()
 
 class App:
