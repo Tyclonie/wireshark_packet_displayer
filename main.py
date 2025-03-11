@@ -10,13 +10,15 @@ class GUI(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-    def load(self):
+    def load(self, lat, lon):
+        values = (400 - (lon * (20/9)), 203 - (lat * (203/90)))
         self.geometry("800x406")
         image = Image.open("resources/map_of_earth.jpg")
         background_image = ImageTk.PhotoImage(image)
         canvas = customtkinter.CTkCanvas(self, width=800, height=406)
         canvas.pack()
         canvas.create_image(0, 0, image=background_image, anchor=tkinter.NW)
+        canvas.create_line(values[0], values[1], 800, 406, fill="purple", width=3)
         self.mainloop()
 
 class App:

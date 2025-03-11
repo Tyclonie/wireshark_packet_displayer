@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Generated a window with a canvas.">
+    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Generated a map within the campus.">
+      <change afterPath="$PROJECT_DIR$/resources/map_of_earth2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -97,7 +98,8 @@
       <workItem from="1741029013271" duration="3672000" />
       <workItem from="1741381369850" duration="670000" />
       <workItem from="1741539084176" duration="6366000" />
-      <workItem from="1741626128634" duration="610000" />
+      <workItem from="1741626128634" duration="8279000" />
+      <workItem from="1741720293187" duration="5210000" />
     </task>
     <task id="LOCAL-00001" summary="Accessed data from packets. MAC Addresses However">
       <option name="closed" value="true" />
@@ -163,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741545078337</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Generated a map within the campus.">
+      <option name="closed" value="true" />
+      <created>1741627779426</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741627779426</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,10 +188,11 @@
     <MESSAGE value="Revised fix to querying invalid data." />
     <MESSAGE value="Now checks for lat, lon and query key value pairs." />
     <MESSAGE value="Generated a window with a canvas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Generated a window with a canvas." />
+    <MESSAGE value="Generated a map within the campus." />
+    <option name="LAST_COMMIT_MESSAGE" value="Generated a map within the campus." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1741545808219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1741730715411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wireshark_Packet_Displayer$main.coverage" NAME="main Coverage Results" MODIFIED="1738850958720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
