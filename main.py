@@ -11,7 +11,8 @@ class GUI(customtkinter.CTk):
         super().__init__()
 
     def load(self, lat, lon):
-        values = (400 - (lon * (20/9)), 203 - (lat * (203/90)))
+        values = (400 - (lon * (20/9)) if lon < 0 else 400 + (lon * (20/9)),
+                  203 + (lat * (203/90)) if lat < 0 else 203 - (lat * (203/9)))
         self.geometry("800x406")
         image = Image.open("resources/map_of_earth.jpg")
         background_image = ImageTk.PhotoImage(image)
