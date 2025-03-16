@@ -10,9 +10,10 @@ class GUI(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-    def load(self, lat, lon):
-        values = (400 - (lon * (20/9)) if lon < 0 else 400 + (lon * (20/9)),
-                  203 + (lat * (203/90)) if lat < 0 else 203 - (lat * (203/9)))
+    def load(self):
+        lon = 133
+        lat = 25
+        values = (400 + (lon * (20/9)), 203 + (lat * (203/90)))
         self.geometry("800x406")
         image = Image.open("resources/map_of_earth.png")
         background_image = ImageTk.PhotoImage(image)
@@ -72,7 +73,7 @@ def main():
     # print(app.get_ip_information())
     # print(app.fail_count)
     gui = GUI()
-    gui.load(53, -1)
+    gui.load()
 
 
 
