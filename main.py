@@ -28,6 +28,7 @@ class App:
         self.packets = rdpcap("resources/example_export2.pcapng")
         self.ip_addresses = []
         self.ip_addresses_data = {}
+        self.ip_map = []
 
     def add_ip_addresses(self):
         for packet in self.packets:
@@ -35,7 +36,9 @@ class App:
                 if packet[IP].src not in self.ip_addresses:
                     self.ip_addresses.append(packet[IP].src)
                 if packet[IP].dst not in self.ip_addresses:
-                    self.ip_addresses.append(packet[IP].src)
+                    self.ip_addresses.append(packet[IP].dst)
+                if (packet[IP].src, packet[IP].dst) not in self.ip_map:
+                    self.ip_map.append((packet[IP].src, packet[IP].dst))
 
     def fetch_ip_information(self):
         self.fail_count = 0
@@ -66,13 +69,13 @@ class App:
 
 
 def main():
-    # app = App()
-    # app.add_ip_addresses()
-    # app.fetch_ip_information()
-    # print(app.get_ip_information())
-    # print(app.fail_count)
-    gui = GUI()
-    gui.load(72, -42)
+    app = App()
+    app.add_ip_addresses()
+    app.fetch_ip_information()
+    print(app.get_ip_information())
+    print(app.fail_count)
+    #gui = GUI()
+    #gui.load(72, -42)
 
 
 
