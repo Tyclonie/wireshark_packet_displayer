@@ -71,9 +71,10 @@ class App:
 def main():
     app = App()
     app.add_ip_addresses()
-    app.fetch_ip_information()
-    print(app.get_ip_information())
-    print(app.fail_count)
+    print(app.ip_map)
+    #app.fetch_ip_information()
+    #print(app.get_ip_information())
+    #print(app.fail_count)
     #gui = GUI()
     #gui.load(72, -42)
 
