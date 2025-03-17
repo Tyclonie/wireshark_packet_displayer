@@ -22,7 +22,6 @@ class GUI(customtkinter.CTk):
             try:
                 src_lon, src_lat = ip_address_data[ip_set[0]]['lon'], ip_address_data[ip_set[0]]['lat']
                 if ip_set[1] == local_information[1]:
-                    print(True)
                     dst_lon, dst_lat = local_information[0]['lon'], local_information[0]['lat']
                 else:
                     dst_lon, dst_lat = ip_address_data[ip_set[1]]['lon'], ip_address_data[ip_set[0]]['lat']
@@ -32,9 +31,8 @@ class GUI(customtkinter.CTk):
                               203 + (-dst_lat * (203 / 90)) if dst_lat < 0 else 203 - (dst_lat * (203 / 90)))
                 canvas.create_line(start_values[0], start_values[1], end_values[0], end_values[1], fill="purple",
                                    width=3)
-                print(f"Data for {ip_set}")
             except KeyError:
-                print(f"No data for {ip_set}")
+                continue
         self.mainloop()
 
 class App:
