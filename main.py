@@ -6,6 +6,7 @@ import json
 import customtkinter
 import tkinter
 from PIL import Image, ImageTk
+from customtkinter import filedialog
 
 class GUI(customtkinter.CTk):
     def __init__(self):
@@ -39,11 +40,11 @@ class GUI(customtkinter.CTk):
         self.mainloop()
 
 class App:
-    def __init__(self):
+    def __init__(self, packet_file_path):
         self.user_information = None
         self.local_ip = None
         self.fail_count = None
-        self.packets = rdpcap("resources/example_export2.pcapng")
+        self.packets = rdpcap(packet_file_path)
         self.ip_addresses = []
         self.ip_addresses_data = {}
         self.ip_map = []
@@ -102,7 +103,7 @@ class App:
 
 
 def main():
-    app = App()
+    app = App(filedialog.askopenfilename(filetypes=[("Pcap-NG Packet Capture File", "*.pcapng")]))
     app.add_ip_addresses()
     app.fetch_ip_information()
     gui = GUI()

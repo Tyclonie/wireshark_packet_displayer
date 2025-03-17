@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Added code to draw lines from users location if an outgoing packet is captured">
+    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Updated screen size, line width and line colour. Provides better line clarity.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -101,7 +101,7 @@
       <workItem from="1741720293187" duration="6984000" />
       <workItem from="1741894873430" duration="2643000" />
       <workItem from="1742129333329" duration="8502000" />
-      <workItem from="1742230635739" duration="7495000" />
+      <workItem from="1742230635739" duration="10264000" />
     </task>
     <task id="LOCAL-00001" summary="Accessed data from packets. MAC Addresses However">
       <option name="closed" value="true" />
@@ -263,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742235760061</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Updated screen size, line width and line colour. Provides better line clarity.">
+      <option name="closed" value="true" />
+      <created>1742247679969</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742247679969</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,10 +298,11 @@
     <MESSAGE value="Successfully generates lines from packet origin to the packet destination" />
     <MESSAGE value="Removed debuggers" />
     <MESSAGE value="Added code to draw lines from users location if an outgoing packet is captured" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code to draw lines from users location if an outgoing packet is captured" />
+    <MESSAGE value="Updated screen size, line width and line colour. Provides better line clarity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated screen size, line width and line colour. Provides better line clarity." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1742244409500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1742250245495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wireshark_Packet_Displayer$main.coverage" NAME="main Coverage Results" MODIFIED="1738850958720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
