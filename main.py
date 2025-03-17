@@ -20,7 +20,10 @@ class GUI(customtkinter.CTk):
         canvas.create_image(0, 0, image=background_image, anchor=tkinter.NW)
         for ip_set in ip_map:
             try:
-                src_lon, src_lat = ip_address_data[ip_set[0]]['lon'], ip_address_data[ip_set[0]]['lat']
+                if ip_set[0] == local_information[1]:
+                    src_lon, src_lat = local_information[0]['lon'], local_information[0]['lat']
+                else:
+                    src_lon, src_lat = ip_address_data[ip_set[0]]['lon'], ip_address_data[ip_set[0]]['lat']
                 if ip_set[1] == local_information[1]:
                     dst_lon, dst_lat = local_information[0]['lon'], local_information[0]['lat']
                 else:

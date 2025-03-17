@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Successfully generates lines from packet origin to the packet destination" />
+    <list default="true" id="5aa09b23-2121-4c0e-83a5-8409351610a8" name="Changes" comment="Removed debuggers" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +98,7 @@
       <workItem from="1741720293187" duration="6984000" />
       <workItem from="1741894873430" duration="2643000" />
       <workItem from="1742129333329" duration="8502000" />
-      <workItem from="1742230635739" duration="2841000" />
+      <workItem from="1742230635739" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="Accessed data from packets. MAC Addresses However">
       <option name="closed" value="true" />
@@ -244,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742235010327</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Removed debuggers">
+      <option name="closed" value="true" />
+      <created>1742235065584</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742235065584</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,10 +277,11 @@
     <MESSAGE value="Appends destination when asked as opposed to the source" />
     <MESSAGE value="Generates a list of unique packets source to destinations in tuples" />
     <MESSAGE value="Successfully generates lines from packet origin to the packet destination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successfully generates lines from packet origin to the packet destination" />
+    <MESSAGE value="Removed debuggers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed debuggers" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1742235015253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wiresharkpacketdisplayer$main.coverage" NAME="main Coverage Results" MODIFIED="1742235070958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wireshark_Packet_Displayer$main.coverage" NAME="main Coverage Results" MODIFIED="1738850958720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
