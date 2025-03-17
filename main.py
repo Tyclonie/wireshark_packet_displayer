@@ -1,4 +1,3 @@
-import socket
 from scapy.all import *
 from scapy.layers.inet import IP
 import requests
