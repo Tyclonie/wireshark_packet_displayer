@@ -12,10 +12,10 @@ class GUI(customtkinter.CTk):
         super().__init__()
 
     def load(self, ip_address_data, ip_map, local_information):
-        self.geometry("800x406")
+        self.geometry("1920x960")
         image = Image.open("resources/map_of_earth.png")
         background_image = ImageTk.PhotoImage(image)
-        canvas = customtkinter.CTkCanvas(self, width=800, height=406)
+        canvas = customtkinter.CTkCanvas(self, width=1920, height=960)
         canvas.pack()
         canvas.create_image(0, 0, image=background_image, anchor=tkinter.NW)
         for ip_set in ip_map:
@@ -28,12 +28,12 @@ class GUI(customtkinter.CTk):
                     dst_lon, dst_lat = local_information[0]['lon'], local_information[0]['lat']
                 else:
                     dst_lon, dst_lat = ip_address_data[ip_set[1]]['lon'], ip_address_data[ip_set[0]]['lat']
-                start_values = (400 + (src_lon * (20/9)) if src_lon > 0 else 400 - (-src_lon * (20/9)),
-                                203 + (-src_lat * (203/90)) if src_lat < 0 else 203 - (src_lat * (203/90)))
-                end_values = (400 + (dst_lon * (20 / 9)) if dst_lon > 0 else 400 - (-dst_lon * (20 / 9)),
-                              203 + (-dst_lat * (203 / 90)) if dst_lat < 0 else 203 - (dst_lat * (203 / 90)))
-                canvas.create_line(start_values[0], start_values[1], end_values[0], end_values[1], fill="purple",
-                                   width=3)
+                start_values = (960 + (src_lon * (16/3)) if src_lon > 0 else 960 - (-src_lon * (16/3)),
+                                480 + (-src_lat * (16/3)) if src_lat < 0 else 480 - (src_lat * (16/3)))
+                end_values = (960 + (dst_lon * (16/3)) if dst_lon > 0 else 960 - (-dst_lon * (16/3)),
+                              480 + (-dst_lat * (16/3)) if dst_lat < 0 else 480 - (dst_lat * (16/3)))
+                canvas.create_line(start_values[0], start_values[1], end_values[0], end_values[1], fill="orange",
+                                   width=1)
             except KeyError:
                 continue
         self.mainloop()
