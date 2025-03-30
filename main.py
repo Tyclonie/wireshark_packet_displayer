@@ -12,12 +12,16 @@ class GUI(customtkinter.CTk):
         super().__init__()
 
     def load(self, ip_address_data, ip_map, local_information):
-        self.geometry("1920x960")
+        self.geometry("1920x1080")
         image = Image.open("resources/map_of_earth.png")
         background_image = ImageTk.PhotoImage(image)
-        canvas = customtkinter.CTkCanvas(self, width=1920, height=960)
-        canvas.pack()
+        main_frame = customtkinter.CTkScrollableFrame(self, 1920, 1080)
+        main_frame.pack(fill="both", expand=True)
+        canvas = customtkinter.CTkCanvas(main_frame, width=1920, height=960)
+        canvas.pack(side="top", fill="both", expand=True)
         canvas.create_image(0, 0, image=background_image, anchor=tkinter.NW)
+        packet_frame = customtkinter.CTkScrollableFrame(main_frame, 1920)
+        packet_frame.pack(side="bottom", fill="x", expand=False)
         for ip_set in ip_map:
             try:
                 if ip_set[0] == local_information[1]:
@@ -34,8 +38,12 @@ class GUI(customtkinter.CTk):
                               480 + (-dst_lat * (16/3)) if dst_lat < 0 else 480 - (dst_lat * (16/3)))
                 canvas.create_line(start_values[0], start_values[1], end_values[0], end_values[1], fill="orange",
                                    width=1)
+                label = customtkinter.CTkLabel(packet_frame,
+                                               text=f"{ip_set[0]} -> {ip_address_data[ip_set[0]]}")
+                label.pack(anchor="w")
             except KeyError:
                 continue
+        packet_frame.update_idletasks()
         self.mainloop()
 
 class App:
