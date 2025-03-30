@@ -39,7 +39,18 @@ class GUI(customtkinter.CTk):
                 canvas.create_line(start_values[0], start_values[1], end_values[0], end_values[1], fill="orange",
                                    width=1)
                 label = customtkinter.CTkLabel(packet_frame,
-                                               text=f"{ip_set[0]} -> {ip_address_data[ip_set[0]]}")
+                                               text=f"{ip_set[0]} -> "
+                                                    f"Country: {ip_address_data[ip_set[0]]['country']} "
+                                                    f"City: {ip_address_data[ip_set[0]]['city']} "
+                                                    f"Continent: {ip_address_data[ip_set[0]]['continent']} "
+                                                    f"Region: {ip_address_data[ip_set[0]]['regionName']} "
+                                                    f"District: {ip_address_data[ip_set[0]]['district']} "
+                                                    f"Zip: {ip_address_data[ip_set[0]]['zip']} "
+                                                    f"ISP: {ip_address_data[ip_set[0]]['isp']} "
+                                                    f"Organization: {ip_address_data[ip_set[0]]['org']} "
+                                                    f"Mobile: {ip_address_data[ip_set[0]]['mobile']} "
+                                                    f"Proxy: {ip_address_data[ip_set[0]]['proxy']} "
+                                                    f"Hosting: {ip_address_data[ip_set[0]]['hosting']} ")
                 label.pack(anchor="w")
             except KeyError:
                 continue
